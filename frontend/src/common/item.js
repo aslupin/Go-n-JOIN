@@ -11,36 +11,62 @@ class Item extends Component {
   render() {
     const ItemWrapper = style.div`
         overflow: hidden;
-        padding: 2 2 12px;
-        margin: 35px auto 0;
-        width: 98%;
+        padding: 2 2 10px;
+        margin: 25px auto 0;
+        width: 85%;
         height: 155px;
         box-shadow: 0 0 3px rgba(0, 0, 0, .05), 0 0px 12px rgba(0, 0, 0, .08);
         border-radius: 13px;
-        background-color: #FFFF;
+        // background-color: #FFFF;
+        background-image: url(${this.props.imgSrc});
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
         `
-    const ItemName = style.div`
-        text-align: left;
-        padding-left: 20px;
+    const ItemWrapperDetail = style.div`
+        
+        overflow: hidden;
+        padding: 2 2 12px;
+        margin: 35px auto 0;
+        margin-top: -20px;
+        width: 70%;
+        height: 60px;
+        box-shadow: 0 0 3px rgba(0, 0, 0, .05), 0 0px 12px rgba(0, 0, 0, .08);
+        border-radius: 13px;
+        background-color: #FFEA83;
+        `
+
+    const ItemPromotion = style.div`
+        text-align: center;
         padding-top: 10px;
-        font-size: 16px;
+        font-size: 15px;
         font-weight: bold;
         `
-    const ItemDetail = style.div`
-        text-align: left;
-        padding-left: 20px;
+    const ItemResName = style.div`
+    
+        text-align: center;
         padding-top: 10px;
         font-size: 12px;
         font-weight: normal;
         `
+    const ItemDuration = style.div`
+        margin-top: -10px;
+        margin-right: 10px;
+        text-align: right;
+        font-size: 11px;
+        font-weight: normal;
+        float: right;
+        `
 
+    const imgPromotion = this.props.imgSrc
     return (
       <div>
-        <ItemWrapper>
-          <ItemName>โปรโมชั่น</ItemName>
-
-          <ItemDetail>รายละเอียด</ItemDetail>
-        </ItemWrapper>
+        <ItemWrapper />
+        <ItemWrapperDetail>
+          <ItemPromotion>ไก่ไก่ไก่</ItemPromotion>
+          <ItemResName>KFC</ItemResName>
+          <ItemDuration align="right">วันที่ 1 - 20 มกราคม</ItemDuration>
+        </ItemWrapperDetail>
       </div>
     )
   }

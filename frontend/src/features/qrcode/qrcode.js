@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
+import QRcode from 'qrcode.react';
 
-class qrcode extends Component {
+
+class Qrcode extends Component {
   render() {
     return (
       <div className="qrcode">
-        
+        <QRcode value = "" />
+        qwe
       </div>
     );
   }
 }
 
-export default qrcode;
+export default Qrcode;

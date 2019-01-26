@@ -15,12 +15,6 @@ class Qrcode extends Component {
     }
   }
 
-  qrCodeScan(){
-    //scans
-    
-  }
- 
-
   render() {
     const Pc = styled.div`
       text-align: center;
@@ -29,12 +23,14 @@ class Qrcode extends Component {
     const SuccessStyle = styled.div`
       margin: auto;
       text-align: center;
-      
+      display: flex;
     `
     const Checked = styled.img`
       width: 10%;
       height: 10%;
-      
+      margin-right: auto;
+      padding-left: 10px;
+      padding-top: 20px;
       `
     const Qrstyle = styled.div`
       
@@ -62,7 +58,7 @@ class Qrcode extends Component {
         
           {this.state.success?
           <SuccessStyle>
-              <h1 style={{float: "left" ,paddingLeft:"10px"}}>SUCCESS</h1>
+              <h1 style={{marginLeft:"auto"}}>SUCCESS</h1>
               <Checked src={success}/>
           </SuccessStyle>
           :<Qrstyle><QRcode value = "กะเพราะหมูกรอบ 4" size = {this.state.size} style={{width: "100%", height: "100%", paddingTop: "20px"}}/>
@@ -72,7 +68,6 @@ class Qrcode extends Component {
         <Pc>Line up the QR code in the camera frame</Pc>
         <button onClick = {() => this.setState({success:true})}>yes</button>
         <button onClick = {() => this.setState({success:false})}>no</button>
-        {this.qrCodeScan()}
       </div>
     );
   }

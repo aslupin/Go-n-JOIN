@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import QRcode from 'qrcode.react';
 import axios from 'axios';
-import firebase from 'firebase';
+import styled from 'styled-components'
 import Navbar from '../../common/navbar';
 let database
 class Qrcode extends Component {
@@ -9,16 +9,22 @@ class Qrcode extends Component {
     super(props)
     this.state = {
       data: "asdfgh",
-      success: false
+      success: false,
+      size: 500
     }
   }
 
   qrCodeScan(){
-    //scan
+    //scans
     
   }
 
+  
+
   render() {
+    const Qrstyle = styled(QRcode)`
+      padding-top: 20px;
+    `
     return (
       <div className="qrcode">
         <Navbar />
@@ -26,9 +32,8 @@ class Qrcode extends Component {
         <div className="success">
           success
         </div>
-        :<QRcode value = "EARN" />
+        :<Qrstyle value = "กะเพราะหมูกรอบ 4" size = {this.state.size} style={{width: "100%", height: "100%", paddingTop:"20px"}}/>
         }
-        {this.state.data}
         {this.qrCodeScan()}
       </div>
     );

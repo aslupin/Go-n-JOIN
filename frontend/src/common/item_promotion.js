@@ -61,9 +61,9 @@ class Item extends Component {
       <div>
         <ItemWrapper />
         <ItemWrapperDetail>
-          <ItemPromotion>ไก่ไก่ไก่</ItemPromotion>
+          <ItemPromotion>Chicken Fest</ItemPromotion>
           <ItemResName>KFC</ItemResName>
-          <ItemDuration align="right">วันที่ 1 - 20 มกราคม</ItemDuration>
+          <ItemDuration align="right">2019 - 02 - 01</ItemDuration>
         </ItemWrapperDetail>
       </div>
     )

@@ -13,7 +13,7 @@ class Item extends Component {
       overflow: hidden;
       padding: 2 2 10px;
       margin: 25px auto 0;
-      margin-top: -260px;
+      margin-top: -290px;
       width: 68%;
       height: 155px;
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.05), 0 0px 12px rgba(0, 0, 0, 0.08);
@@ -29,62 +29,52 @@ class Item extends Component {
 
       padding: 2 2 12px;
       margin: 35px auto 0;
-      margin-top: 90px;
+      margin-top: 110px;
       width: 87%;
-      height: 209px;
-      box-shadow: 0 0 3px rgba(0, 0, 0, 0.05), 0 0px 12px rgba(0, 0, 0, 0.08);
+      height: 220px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.15), 0 0px 12px rgba(0, 0, 0, 0.18);
       border-radius: 13px;
       background-color: #fff;
     `
 
     const ItemPromotion = styled.div`
-      margin-top: 103px;
+      margin-top: 100px;
       text-align: center;
-      padding-top: 10px;
+      padding-bottom: 10px;
       font-size: 20px;
       font-weight: bold;
-    `
-    const ItemResName = styled.div`
-      text-align: center;
-      padding-top: 10px;
-      font-size: 12px;
-      font-weight: normal;
-    `
-    const ItemDuration = styled.div`
-      margin-top: -10px;
-      margin-right: 10px;
-      text-align: right;
-      font-size: 11px;
-      font-weight: normal;
-      float: right;
     `
     const Inline = styled.div`
       /* padding-top: 5px; */
       /* text-align: center; */
-      display: block;
+      justify-content: space-between;
+      display: flex;
     `
     const Topic = styled.div`
-      /* font-size: 17px; */
-      /* font-weight: bold; */
-      float: left;
-      display: inline-flex;
-      /* padding-left: 2px; */
+      font-size: 15px;
+      font-weight: bold;
+      /* float: left; */
+      text-align: left;
+      display: inline-block;
+      padding-left: 10px;
     `
     const Value = styled.div`
-      float: right;
-      display: inline-flex;
-      /* padding-right: 5px; */
+      /* float: right; */
+      font-size: 14px;
+      text-align: right;
+      display: inline-block;
+      padding-right: 10px;
     `
 
     const imgPromotion = this.props.imgSrc
     return (
       <div>
         <ItemWrapperDetail>
-          <ItemPromotion>ไก่ไก่ไก่</ItemPromotion>
-          <div>
+          <ItemPromotion>Chicken Fest</ItemPromotion>
+          <Inline>
             <Topic>Reward</Topic>
             <Value>Get Up to $19 voucher</Value>
-          </div>
+          </Inline>
           <Inline>
             <Topic>Maximun members</Topic>
             <Value>10</Value>
@@ -95,6 +85,7 @@ class Item extends Component {
           </Inline>
         </ItemWrapperDetail>
         <ItemWrapper />
+        <div style={{ paddingTop: '160px' }} />
       </div>
     )
   }

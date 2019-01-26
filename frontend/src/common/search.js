@@ -15,17 +15,16 @@ class Search extends Component {
   render() {
     const SearchBox = style.input`
     font-family: 'Mali', cursive;
-    background-image: url(${SearchBoxImage});
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     font-size: 15px;
-    border: none;
-    border-radius: 16px;
-    outline: none;
-    top: 0px;
+    border-color: black;
+    border-radius: 5px;
+    border-width: 2.7px;
+    padding-left: 7px;
+    width: 60%;
     `
-
     // const itemSearch = this.props.itemSearch
 
     return (

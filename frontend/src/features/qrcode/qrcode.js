@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import QRcode from 'qrcode.react';
 import axios from 'axios';
 import firebase from 'firebase';
+import Navbar from '../../common/navbar';
 let database
 class Qrcode extends Component {
   constructor(props) {
@@ -10,17 +11,6 @@ class Qrcode extends Component {
       data: "asdfgh",
       success: false
     }
-    var config = {
-      apiKey: "AIzaSyC1oEPAHEbiDclvc9YboefuuDSKhkFAg_A",
-      authDomain: "aroiihack.firebaseapp.com",
-      databaseURL: "https://aroiihack.firebaseio.com",
-      projectId: "aroiihack",
-      storageBucket: "aroiihack.appspot.com",
-      messagingSenderId: "24219879467"
-    };
-    firebase.initializeApp(config);
-    console.log(firebase.database);
-    database = firebase.database;
   }
 
   qrCodeScan(){
@@ -31,6 +21,7 @@ class Qrcode extends Component {
   render() {
     return (
       <div className="qrcode">
+        <Navbar />
         {this.state.success?
         <div className="success">
           success

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import Item from '../../common/item'
+import Item from '../../common/item_promotion'
 import Navbar from '../../common/navbar'
 import M1 from '../../assets/food_pic/1.jpg'
 import M2 from '../../assets/food_pic/2.jpg'

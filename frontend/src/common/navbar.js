@@ -5,7 +5,6 @@ import iconSearch from '../assets/search_page/musica-searcher.png'
 import iconQR from '../assets/search_page/qr-code.png'
 import iconRanking from '../assets/search_page/rank-3.png'
 import iconArrow from '../assets/group/left-arrow.png'
-import bgNav from '../assets/search_page/Ellipse_3.png'
 
 const NavbarBox = styled.div`
   position: fixed;
@@ -91,7 +90,7 @@ const Navbar = props => (
       <NavbarBoxHeader>
         <Header>
           <img src={iconArrow} width="25px" style={{ paddingRight: '14px' }} />
-          Detail
+          {props.HeaderText}
         </Header>
         <IconTop src={iconSearch} />
         <IconTop src={iconQR} />

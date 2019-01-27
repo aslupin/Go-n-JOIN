@@ -18,7 +18,6 @@ class Item extends Component {
       height: 155px;
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.05), 0 0px 12px rgba(0, 0, 0, 0.08);
       border-radius: 13px;
-      // background-color: #FFFF;
       background-image: url(${this.props.imgSrc});
       background-repeat: no-repeat;
       background-position: center;

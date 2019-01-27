@@ -15,7 +15,7 @@ class List extends Component {
       text-align: center;
     `
     return (
-      <div>
+      <div style={{maxWidth: "375px", maxHeight: "667px"}}>
         <Body>
           <Navbar SearchCompChecker={true} />
           <Item imgSrc={M1} />

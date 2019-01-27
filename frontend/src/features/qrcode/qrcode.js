@@ -88,7 +88,7 @@ class Qrcode extends Component {
       padding-bottom: 50px;
     `
     return (
-      <div className="qrcode">
+      <div className="qrcode" style={{maxWidth: "375px", maxHeight: "667px"}}>
         <Navbar HeaderText={'QR CODE'}/>
         <div style={{paddingTop:"30px"}}></div>
         

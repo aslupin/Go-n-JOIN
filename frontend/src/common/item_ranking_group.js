@@ -17,10 +17,11 @@ class ItemRankingGroup extends Component {
       /* overflow: hidden; */
       padding: 2 2 12px;
       margin: 35px auto 0;
-      margin-top: 20px;
+      margin-top: 10px;
+      margin-bottom: 15px;
       width: 86%;
       height: 45px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.15), 0 0px 12px rgba(0, 0, 0, 0.18);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.25), 0 0px 12px rgba(0, 0, 0, 0.38);
       border-radius: 7px;
       /* MOCK PROPS */
       background-color: ${this.props.color_rank};
@@ -49,8 +50,10 @@ class ItemRankingGroup extends Component {
     const TextLeftRank = styled.div`
       width: 25px;
       height: auto;
-      text-align: left;
-      display: inline-block;
+      margin: 4px;
+      font-size: 28px;
+      font-weight: bolder;
+      padding-left: 26px;
     `
     const NameRank = styled.div`
       width: 25px;
@@ -87,8 +90,11 @@ class ItemRankingGroup extends Component {
       <div>
         <ItemRanking>
           <LeftWrap>
-            <IconLeftRank src={this.props.star} />
-            {/* <TextLeftRank>1 st</TextLeftRank> */}
+            {this.props.header_group ? (
+              <IconLeftRank src={this.props.star} />
+            ) : (
+              <TextLeftRank>{this.props.number_ranking}</TextLeftRank>
+            )}
             <NameRank>{this.props.name}</NameRank>
           </LeftWrap>
           <RightWrap>

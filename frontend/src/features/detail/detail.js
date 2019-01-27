@@ -65,18 +65,57 @@ class Detail extends Component {
             star={iconStarI}
             name="aroii"
             score={89}
+            header_group={true}
           />
           <ItemRankingGroup
             color_rank="#ffea83"
             star={iconStarII}
-            name="aroii"
-            score={89}
+            name="react"
+            score={88}
+            header_group={true}
           />
           <ItemRankingGroup
             color_rank="#fef6ce"
             star={iconStarIII}
-            name="aroii"
-            score={89}
+            name="spiderman"
+            score={79}
+            header_group={true}
+          />
+          <ItemRankingGroup
+            color_rank="#fff"
+            number_ranking="4"
+            name="Ant"
+            score={73}
+            header_group={false}
+          />
+
+          <ItemRankingGroup
+            color_rank="#fff"
+            number_ranking="5"
+            name="Zombie"
+            score={60}
+            header_group={false}
+          />
+          <ItemRankingGroup
+            color_rank="#fff"
+            number_ranking="6"
+            name="Kaimook"
+            score={49}
+            header_group={false}
+          />
+          <ItemRankingGroup
+            color_rank="#fff"
+            number_ranking="7"
+            name="Ore"
+            score={10}
+            header_group={false}
+          />
+          <ItemRankingGroup
+            color_rank="#ff"
+            number_ranking="8"
+            name="Snack"
+            score={1}
+            header_group={false}
           />
           {/* <ItemRankingGroup color_rank="#ffd700" star={iconStarI} name="aroii" score={89} /> */}
         </Body>

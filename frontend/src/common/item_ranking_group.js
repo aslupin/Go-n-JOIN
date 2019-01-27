@@ -94,7 +94,7 @@ class ItemRankingGroup extends Component {
     `
     return (
       <div>
-        <Go href="/group">
+        <Go href="/myrank">
           <ItemRanking>
             <LeftWrap>
               {this.props.header_group ? (

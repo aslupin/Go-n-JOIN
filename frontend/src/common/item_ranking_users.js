@@ -105,31 +105,39 @@ class ItemRankingUsers extends Component {
       padding-top: 10px;
       padding-right: 55px;
     `
+    const Go = styled.a`
+      cursor: pointer;
+      outline: none;
+      text-decoration: none;
+      color: #000;
+    `
     return (
       <div>
-        {!this.props.header_topic ? (
-          <ItemRanking>
-            <LeftWrap>
-              <NameRank>{this.props.name}</NameRank>
-            </LeftWrap>
-            <RightWrap>
-              <Rank>{this.props.number_ranking}</Rank>
-              <IconRightRank src={iconArrowR} />
-            </RightWrap>
-          </ItemRanking>
-        ) : (
-          <HeaderRank>
-            <LeftWrap>
-              <img src={this.props.icon_user} height="20px" />
-              <NameRank>Group</NameRank>
-            </LeftWrap>
-            <RightWrap>
-              <img src={this.props.icon_rank} height="30px" />
-              <Rank>Rank</Rank>
-              {/* <IconRightRank src={iconArrowR} /> */}
-            </RightWrap>
-          </HeaderRank>
-        )}
+        <Go href="/group">
+          {!this.props.header_topic ? (
+            <ItemRanking>
+              <LeftWrap>
+                <NameRank>{this.props.name}</NameRank>
+              </LeftWrap>
+              <RightWrap>
+                <Rank>{this.props.number_ranking}</Rank>
+                <IconRightRank src={iconArrowR} />
+              </RightWrap>
+            </ItemRanking>
+          ) : (
+            <HeaderRank>
+              <LeftWrap>
+                <img src={this.props.icon_user} height="20px" />
+                <NameRank>Group</NameRank>
+              </LeftWrap>
+              <RightWrap>
+                <img src={this.props.icon_rank} height="30px" />
+                <Rank>Rank</Rank>
+                {/* <IconRightRank src={iconArrowR} /> */}
+              </RightWrap>
+            </HeaderRank>
+          )}
+        </Go>
       </div>
     )
   }

@@ -82,9 +82,8 @@ const Header = styled.p`
 //   display: block;
 // `
 const Navbar = props => (
-  <div>
+  <div style = {{maxWidth: "375px", maxHeight: "667px"}}>
     <BgBody />
-
     {props.SearchCompChecker ? (
       <NavbarBox>
         <Navsearch>

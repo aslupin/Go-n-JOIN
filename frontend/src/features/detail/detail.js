@@ -49,7 +49,7 @@ class Detail extends Component {
       display: inline-block;
     `
     return (
-      <div>
+      <div style={{maxWidth: "375px", maxHeight: "667px"}}>
         <Body>
           <Navbar SearchCompChecker={false} HeaderText={'Detail'} />
           <Card imgSrc={M1} />

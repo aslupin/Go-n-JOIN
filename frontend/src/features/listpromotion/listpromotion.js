@@ -17,7 +17,7 @@ class List extends Component {
     `
 
     return (
-      <div>
+      <div style={{maxWidth: "375px", maxHeight: "667px"}}>
         <Body>
           <Navbar SearchCompChecker={true} />
           <Item

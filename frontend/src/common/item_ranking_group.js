@@ -86,22 +86,30 @@ class ItemRankingGroup extends Component {
       padding-top: 10px;
       padding-right: 25px;
     `
+    const Go = styled.a`
+      cursor: pointer;
+      outline: none;
+      text-decoration: none;
+      color: #000;
+    `
     return (
       <div>
-        <ItemRanking>
-          <LeftWrap>
-            {this.props.header_group ? (
-              <IconLeftRank src={this.props.star} />
-            ) : (
-              <TextLeftRank>{this.props.number_ranking}</TextLeftRank>
-            )}
-            <NameRank>{this.props.name}</NameRank>
-          </LeftWrap>
-          <RightWrap>
-            <ScoreRank>{this.props.score}</ScoreRank>
-            <IconRightRank src={iconArrowR} />
-          </RightWrap>
-        </ItemRanking>
+        <Go href="/group">
+          <ItemRanking>
+            <LeftWrap>
+              {this.props.header_group ? (
+                <IconLeftRank src={this.props.star} />
+              ) : (
+                <TextLeftRank>{this.props.number_ranking}</TextLeftRank>
+              )}
+              <NameRank>{this.props.name}</NameRank>
+            </LeftWrap>
+            <RightWrap>
+              <ScoreRank>{this.props.score}</ScoreRank>
+              <IconRightRank src={iconArrowR} />
+            </RightWrap>
+          </ItemRanking>
+        </Go>
       </div>
     )
   }

@@ -22,4 +22,5 @@ $ npm start
 * [npm](https://nodejs.org/en/) - the package manager
 * [React](https://reactjs.org/) - The web framework
 * [qrcode.react](https://www.npmjs.com/package/qrcode.react?activeTab=readme) - Used to generate QR code
-
+## Example from this App
+![Home](https://i.imgur.com/EU8bko2.png)

@@ -2,9 +2,13 @@ import React, { Component } from 'react';
 import QRcode from 'qrcode.react';
 import styled from 'styled-components'
 import Navbar from '../../common/navbar';
-import success from '../../assets/search_page/checked.png';
+import checkimg from '../../assets/QRcode/checked.png';
+import successimg from '../../assets/QRcode/SUCCESS.png';
+import grouprank from '../../assets/QRcode/GROUP RANK.png';
+import no1 from '../../assets/QRcode/1.png';
+import myrank from '../../assets/QRcode/MY RANKING.png';
+import ellipse from '../../assets/QRcode/Ellipses.png';
 
-let database
 class Qrcode extends Component {
   constructor(props) {
     super(props)
@@ -16,6 +20,15 @@ class Qrcode extends Component {
   }
 
   render() {
+    const Text = styled.div`
+      text-align: center;
+      font-size: 2em;
+      padding-top: 10px;
+      animation: blink 2.5s linear infinite alternate;
+      @keyframes blink {
+        to{opacity: 0.4;}
+      }
+    `
     const Pc = styled.div`
       text-align: center;
       margin: auto;
@@ -23,15 +36,32 @@ class Qrcode extends Component {
     const SuccessStyle = styled.div`
       margin: auto;
       text-align: center;
+      padding-left: 55px;
       display: flex;
     `
     const Checked = styled.img`
       width: 10%;
       height: 10%;
-      margin-right: auto;
       padding-left: 10px;
       padding-top: 20px;
       `
+    const GroupRank = styled.img`
+      display: block;
+      max-width: 60%;
+      max-height: 60%;
+      margin: auto;
+      margin-top: 70px;
+      `
+    const Myranking = styled.div`
+      background-color: #ffd700;
+      width: 280px;
+      height: 55px;
+      border-radius: 20px;
+      margin: 40px auto;
+    `
+    const No1 = styled.div`
+      text-align: center;
+    `
     const Qrstyle = styled.div`
       
       text-align: center;
@@ -57,15 +87,25 @@ class Qrcode extends Component {
         <div style={{paddingTop:"50px"}}></div>
         
           {this.state.success?
-          <SuccessStyle>
-              <h1 style={{marginLeft:"auto"}}>SUCCESS</h1>
-              <Checked src={success}/>
-          </SuccessStyle>
-          :<Qrstyle><QRcode value = "กะเพราะหมูกรอบ 4" size = {this.state.size} style={{width: "100%", height: "100%", paddingTop: "20px"}}/>
+          <div>
+            <SuccessStyle>
+                <Checked src={successimg} style={{width:"55%", paddingLeft:"35px"}}/>
+                <Checked src={checkimg} />
+            </SuccessStyle>
+            <GroupRank src={grouprank} />
+            <No1>
+            <img src={ellipse} style={{width:"100%"}}></img>
+            </No1>
+            <Myranking ><Text>MY RANKING</Text></Myranking>
+          </div>
+          :<div>
+            <Qrstyle><QRcode value = "กะเพราะหมูกรอบ 4" size = {this.state.size} style={{width: "100%", height: "100%", paddingTop: "20px"}}/>
                     <Dotline />
-          </Qrstyle>
-          }
-        <Pc>Line up the QR code in the camera frame</Pc>
+            </Qrstyle>
+            <Pc>Line up the QR code in the camera frame</Pc>
+          </div>
+          } 
+        
         <button onClick = {() => this.setState({success:true})}>yes</button>
         <button onClick = {() => this.setState({success:false})}>no</button>
       </div>

@@ -15,21 +15,49 @@ class List extends Component {
     const Body = styled.div`
       text-align: center;
     `
+    const Go = styled.div`
+      cursor: pointer;
+    `
 
     return (
-      <div style={{maxWidth: "375px", maxHeight: "667px"}}>
+      <div style={{ maxWidth: '375px', maxHeight: '667px' }}>
         <Body>
           <Navbar SearchCompChecker={true} />
-          <Item
-            imgSrc={M1}
-            // onClick={() => {
-            //   this.props.history.push('/detail')
-            // }}
-          />
-          <Item imgSrc={M2} />
-          <Item imgSrc={M3} />
-          <Item imgSrc={M4} />
-          <Item imgSrc={M5} />
+          <Go
+            onClick={() => {
+              this.props.history.push('/detail')
+            }}
+          >
+            <Item imgSrc={M1} />
+          </Go>
+          <Go
+            onClick={() => {
+              this.props.history.push('/detail')
+            }}
+          >
+            <Item imgSrc={M2} />
+          </Go>
+          <Go
+            onClick={() => {
+              this.props.history.push('/detail')
+            }}
+          >
+            <Item imgSrc={M3} />
+          </Go>
+          <Go
+            onClick={() => {
+              this.props.history.push('/detail')
+            }}
+          >
+            <Item imgSrc={M4} />
+          </Go>
+          <Go
+            onClick={() => {
+              this.props.history.push('/detail')
+            }}
+          >
+            <Item imgSrc={M5} />
+          </Go>
         </Body>
       </div>
     )

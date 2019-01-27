@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Redirect } from 'react-router'
 import styled from 'styled-components'
 import Item from '../../common/item_promotion'
 import Navbar from '../../common/navbar'
@@ -14,11 +15,17 @@ class List extends Component {
     const Body = styled.div`
       text-align: center;
     `
+
     return (
       <div>
         <Body>
           <Navbar SearchCompChecker={true} />
-          <Item imgSrc={M1} />
+          <Item
+            imgSrc={M1}
+            // onClick={() => {
+            //   this.props.history.push('/detail')
+            // }}
+          />
           <Item imgSrc={M2} />
           <Item imgSrc={M3} />
           <Item imgSrc={M4} />

@@ -11,9 +11,9 @@ You’ll need to have Node 8.10.0 or later on your local development machine (bu
 ### Installing
 
 ```sh
-git clone https://github.com/aslupin/foodtech-aroii.git
-cd foodtech-aroii/frontend/
-npm start
+$ git clone https://github.com/aslupin/foodtech-aroii.git
+$ cd foodtech-aroii/frontend/
+$ npm start
 ```
 
 ## Built With

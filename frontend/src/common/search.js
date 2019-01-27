@@ -14,16 +14,18 @@ class Search extends Component {
 
   render() {
     const SearchBox = style.input`
-    font-family: 'Mali', cursive;
+    // font-family: 'Mali', cursive;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    
     font-size: 15px;
     border-color: black;
     border-radius: 5px;
     border-width: 2.7px;
     padding-left: 7px;
     width: 60%;
+    outline: none;
     `
     // const itemSearch = this.props.itemSearch
 
@@ -32,7 +34,7 @@ class Search extends Component {
         <form>
           <SearchBox
             autoFocus
-            placeholder="..."
+            placeholder="Search"
             type="text"
             // value={e.target.value}
             // onChange={this.handleChange}

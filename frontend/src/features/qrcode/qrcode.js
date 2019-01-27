@@ -5,9 +5,8 @@ import Navbar from '../../common/navbar';
 import checkimg from '../../assets/QRcode/checked.png';
 import successimg from '../../assets/QRcode/SUCCESS.png';
 import grouprank from '../../assets/QRcode/GROUP RANK.png';
-import no1 from '../../assets/QRcode/1.png';
-import myrank from '../../assets/QRcode/MY RANKING.png';
 import ellipse from '../../assets/QRcode/Ellipses.png';
+import rightArrow from '../../assets/detail/right-arrow.png';
 
 class Qrcode extends Component {
   constructor(props) {
@@ -20,18 +19,19 @@ class Qrcode extends Component {
   }
 
   render() {
+    const Qrpage = styled.div`
+      transition: 2s;
+    `
     const Text = styled.div`
       text-align: center;
       font-size: 2em;
+      font-weight: bold;
       padding-top: 10px;
-      animation: blink 2.5s linear infinite alternate;
-      @keyframes blink {
-        to{opacity: 0.4;}
-      }
     `
     const Pc = styled.div`
+      font-size: 1.5em;
       text-align: center;
-      margin: auto;
+      margin: auto 30px;
     `
     const SuccessStyle = styled.div`
       margin: auto;
@@ -57,23 +57,29 @@ class Qrcode extends Component {
       width: 280px;
       height: 55px;
       border-radius: 20px;
-      margin: 40px auto;
+      margin: 20px auto;
+      padding-left: 14px;
+      display: flex;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+    `
+    const Right = styled.img`
+      margin: 14px auto;  
+      width: 30px;
+      height: 30px;
     `
     const No1 = styled.div`
       text-align: center;
     `
     const Qrstyle = styled.div`
-      
+      background-color: white;
       text-align: center;
       width: 75%;
       height: 100%;
-      margin: auto;
-      top: 100px;
+      margin: 20px auto;
       padding: 20px;
       padding-bottom: 80px;
       border-radius: 10px;
-      box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);s
-      
+      box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     `
     const Dotline = styled.div`
       border:none;
@@ -83,8 +89,8 @@ class Qrcode extends Component {
     `
     return (
       <div className="qrcode">
-        <Navbar />
-        <div style={{paddingTop:"50px"}}></div>
+        <Navbar HeaderText={'QR CODE'}/>
+        <div style={{paddingTop:"30px"}}></div>
         
           {this.state.success?
           <div>
@@ -94,16 +100,16 @@ class Qrcode extends Component {
             </SuccessStyle>
             <GroupRank src={grouprank} />
             <No1>
-            <img src={ellipse} style={{width:"100%"}}></img>
+            <img src={ellipse} style={{width:"90%"}}></img>
             </No1>
-            <Myranking ><Text>MY RANKING</Text></Myranking>
+            <Myranking ><Text>MY RANKING</Text><Right src={rightArrow}/></Myranking>
           </div>
-          :<div>
-            <Qrstyle><QRcode value = "กะเพราะหมูกรอบ 4" size = {this.state.size} style={{width: "100%", height: "100%", paddingTop: "20px"}}/>
+          :<Qrpage>
+            <Qrstyle><QRcode value = "กะเพราะหมูกรอบไข่ดาว 4" size = {this.state.size} style={{width: "100%", height: "100%", paddingTop: "40px"}}/>
                     <Dotline />
             </Qrstyle>
             <Pc>Line up the QR code in the camera frame</Pc>
-          </div>
+          </Qrpage>
           } 
         
         <button onClick = {() => this.setState({success:true})}>yes</button>

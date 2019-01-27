@@ -9,7 +9,7 @@ import promiseMiddleware from 'redux-promise-middleware'
 
 import reducers from './reducers'
 import RouteCustom from './Route'
-
+import './App.css'
 import * as serviceWorker from './serviceWorker'
 
 // const store = createStore(reducers)

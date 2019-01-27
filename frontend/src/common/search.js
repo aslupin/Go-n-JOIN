@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import SearchBoxImage from '../assets/search_page/Rectangle_2.png'
-import style from 'styled-components'
+import styled from 'styled-components'
 class Search extends Component {
   constructor(props) {
     super(props)
@@ -13,19 +13,19 @@ class Search extends Component {
   //   }
 
   render() {
-    const SearchBox = style.input`
-    // font-family: 'Mali', cursive;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    
-    font-size: 15px;
-    border-color: black;
-    border-radius: 5px;
-    border-width: 2.7px;
-    padding-left: 7px;
-    width: 60%;
-    outline: none;
+    const SearchBox = styled.input`
+      /* // font-family: 'Mali', cursive; */
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      max-width: 360px;
+      font-size: 15px;
+      border-color: black;
+      border-radius: 5px;
+      border-width: 2.7px;
+      padding-left: 7px;
+      width: 60%;
+      outline: none;
     `
     // const itemSearch = this.props.itemSearch
 

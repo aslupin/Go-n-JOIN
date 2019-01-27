@@ -1,4 +1,5 @@
 import React from 'react'
+import { withRouter } from 'react-router-dom'
 import styled from 'styled-components'
 import Search from './search'
 import iconSearch from '../assets/search_page/musica-searcher.png'
@@ -44,6 +45,8 @@ const BgBody = styled.div`
 
 const IconTop = styled.img`
   /* position: ; */
+  width: auto;
+  height: auto;
   text-align: right;
   padding-top: 10px;
   padding-left: 8.5px;
@@ -52,10 +55,10 @@ const IconTop = styled.img`
 const Navsearch = styled.div`
   position: absolute;
   height: 50px;
-  width: 100%;
+  width: 60%;
   top: 10px;
   left: 10px;
-  text-align: left;
+  text-align: center;
   display: inline-block;
 `
 
@@ -73,6 +76,11 @@ const Header = styled.p`
 //   display: inline-block;
 //   text-align: right;
 // `
+
+// const Clickto = styled(Link)`
+
+//   display: block;
+// `
 const Navbar = props => (
   <div>
     <BgBody />
@@ -82,19 +90,36 @@ const Navbar = props => (
         <Navsearch>
           <Search />
         </Navsearch>
-        <IconTop src={iconSearch} style={{borderImage: "10px"}}/>
-        <IconTop src={iconQR} />
-        <IconTop src={iconRanking} />
+
+        <a href="/">
+          <IconTop src={iconSearch} style={{ borderImage: '10px' }} />
+        </a>
+        <a href="/qrcode">
+          <IconTop src={iconQR} />
+        </a>
+        <a href="/myrank">
+          <IconTop src={iconRanking} />
+        </a>
       </NavbarBox>
     ) : (
       <NavbarBoxHeader>
-        <Header>
+        <Header onClick={() => this.props.history.goBack()}>
+          {/* <a href={() => this.context.router.goBack()}> */}
           <img src={iconArrow} width="25px" style={{ paddingRight: '14px' }} />
+          {/* </a> */}
           {props.HeaderText}
         </Header>
-        <IconTop src={iconSearch} />
-        <IconTop src={iconQR} />
-        <IconTop src={iconRanking} />
+
+        {/* <a href="/detail">test</a> */}
+        <a href="/">
+          <IconTop src={iconSearch} />
+        </a>
+        <a href="/qrcode">
+          <IconTop src={iconQR} />
+        </a>
+        <a href="/myrank">
+          <IconTop src={iconRanking} />
+        </a>
       </NavbarBoxHeader>
     )}
 

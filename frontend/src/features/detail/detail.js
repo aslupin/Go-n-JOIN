@@ -3,8 +3,16 @@ import styled from 'styled-components'
 import Search from '../../common/search'
 import Card from '../../common/card_detail'
 import Navbar from '../../common/navbar'
-import M1 from '../../assets/food_pic/4.jpg'
+import ItemRankingGroup from '../../common/item_ranking_group'
 import iconSearch from '../../assets/search_page/musica-searcher.png'
+
+// MOCK-DATA (NON-DB)
+import M1 from '../../assets/food_pic/4.jpg'
+
+import iconStarI from '../../assets/detail/gold_star.png'
+import iconStarII from '../../assets/detail/silver_star.png'
+import iconStarIII from '../../assets/detail/bronze_star.png'
+
 class Detail extends Component {
   render() {
     const Body = styled.div`
@@ -51,6 +59,26 @@ class Detail extends Component {
             <ImageSearch src={iconSearch} />
             <Search />
           </SearchBox>
+
+          <ItemRankingGroup
+            color_rank="#ffd700"
+            star={iconStarI}
+            name="aroii"
+            score={89}
+          />
+          <ItemRankingGroup
+            color_rank="#ffea83"
+            star={iconStarII}
+            name="aroii"
+            score={89}
+          />
+          <ItemRankingGroup
+            color_rank="#fef6ce"
+            star={iconStarIII}
+            name="aroii"
+            score={89}
+          />
+          {/* <ItemRankingGroup color_rank="#ffd700" star={iconStarI} name="aroii" score={89} /> */}
         </Body>
       </div>
     )

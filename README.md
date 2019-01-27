@@ -1,6 +1,7 @@
-# Aroii-foodtech 
+# Go 'n JOIN
 
-
+This project have a party feature that merchant can start a campaign.
+User can join or create a new party in each campaign to competition then get the promotion.
 
 ### Prerequisites
 

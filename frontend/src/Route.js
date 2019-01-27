@@ -5,10 +5,11 @@ import { Switch, Route } from 'react-router-dom'
 // import MyDashBoard from './features/mydashboard/mydashboard'
 import ListPromotion from './features/listpromotion/listpromotion'
 // <<<<<<< HEAD
-import QRcode from './features/qrcode/qrcode';
-import Modal from './common/modal';
+import QRcode from './features/qrcode/qrcode'
+import Modal from './common/modal'
 // =======
 import DetailPage from './features/detail/detail'
+import GroupPage from './features/group/group'
 
 // >>>>>>> b3c9fc39156baa60f1e9e65431a48ca01a18bf98
 export default () => (
@@ -16,6 +17,7 @@ export default () => (
     <Route path="/" exact component={ListPromotion} />
     <Route path="/detail" exact component={DetailPage} />
     <Route path="/modal" exact component={Modal} />
+    <Route path="/group" exact component={GroupPage} />
     {/* <Route path="/mydashboard" exact component={MyDashBoard} /> */}
     <Route path="/qrcode" exact component={QRcode} />
   </Switch>
